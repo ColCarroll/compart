@@ -1,0 +1,10 @@
+black
+ipykernel
+jupyter
+mypy
+nbconvert
+pandoc
+pydocstyle
+pylint
+pytest
+pytest-cov
