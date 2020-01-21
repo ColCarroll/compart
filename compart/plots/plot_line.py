@@ -74,7 +74,7 @@ def plot_vline(ax, x, ymin, ymax, color, lw=0.05, n=150, fuzz=5, width=0.02, **k
     -------
     None
     """
-    y = np.linspace(ymin, ymax, (ymax - ymin) / width)
+    y = np.linspace(ymin, ymax, int((ymax - ymin) / width))
     x = x * np.ones_like(y)
     return plot_line(ax, x, y, color, lw=lw, n=n, fuzz=fuzz, width=width, **kwargs)
 
