@@ -112,6 +112,6 @@ def plot_hline(ax, y, xmin, xmax, color, lw=0.05, n=150, fuzz=5, width=0.02, **k
     -------
     None
     """
-    x = np.linspace(xmin, xmax, (xmax - xmin) / width)
+    x = np.linspace(xmin, xmax, int((xmax - xmin) / width))
     y = y * np.ones_like(x)
     return plot_line(ax, x, y, color, lw=lw, n=n, fuzz=fuzz, width=width, **kwargs)
