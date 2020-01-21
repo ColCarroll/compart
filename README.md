@@ -1,5 +1,7 @@
 # Compart
 
+[![Actions Status](https://github.com/ColCarroll/compart/workflows/Python%20package/badge.svg)](https://github.com/ColCarroll/compart/actions)
+
 _An experimental library for doing computational art._
 
 Heavily influenced by [Computational Drawing, by Carl Lostritto](http://lostritto.com/book).
