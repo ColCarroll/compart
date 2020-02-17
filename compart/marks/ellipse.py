@@ -1,10 +1,9 @@
 """Circles and ellipses."""
 from matplotlib.path import Path
 from matplotlib.collections import PathCollection
-from matplotlib.colors import to_rgba
 import numpy as np
 
-from .utils import rotate_in_place
+from .utils import rotate_in_place, jittered_colors
 
 
 class Ellipse:
@@ -96,11 +95,7 @@ class Ellipse:
         -------
         None
         """
-        color = np.array(to_rgba(color)) * 255
-        colors = np.tile(color.reshape(-1, 1), n).T
-        colors[:, :3] += np.random.randint(-50, 50, (n, 3))
-
-        colors = np.minimum(255, np.maximum(0, colors)) / 255
+        colors = jittered_colors(color, n)
         alpha = kwargs.pop("alpha", 0.05)
         colors[:, -1] = alpha
         ax.add_collection(
